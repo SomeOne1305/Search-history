@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(7, 3, 25);
+}
+
+.search-bar{
+    width: 400px;
+    height: auto;
+}
+.search-menu{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgb(101, 100, 100);
+}
+.search{
+    width: 75%;
+    height: 45px;
+    padding: 5px;
+}
+
+input[type="search"]{
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 18px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fff;
+    background-color: transparent;
+}
+
+.search-icon{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 22px;
+    background-color: #089ae8;
+    cursor: pointer;
+}
+
+.focus{
+    box-shadow: 0 0 5px #089ae8; 
+    border-color: #fff;
+}
+.search-block{
+    width: 100%;
+    height: 45px;
+    border: 1px solid rgb(98, 96, 96);
+    display: flex;
+}
+
+.search-history{
+    width: 100%;
+    height: auto;
+}
+.history-item{
+    width: 100%;
+    height: 45px;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #fff;
+}
+.history-word{
+    color: #fff;
+    width: 90%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.delete{
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.delete:hover:after{
+    content: "DELETE";
+    padding:5px;
+    border-radius: 3px;
+    background-color: rgb(30, 30, 30);
+    color: #e34114;
+    position: absolute;
+    top: 0;
+    left: 280%;
+}
+.delete:hover{
+    color: #e34114;
+}
+.delete:hover::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: rgb(30, 30, 30);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 45%;
+    left: 245%;
+}
+@media (max-width: 400px) {
+    .search-bar{
+        max-width: 90vw;
+    }
+}
