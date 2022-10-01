@@ -49,5 +49,25 @@ document.addEventListener('keypress', (e) => {
         }
     }
 })
-search_icon.addEventListener('click', create)
+search_icon.addEventListener('click', ()=>{
+    if (search_inp.value.length > 0) {
+        create()
+    } else {
+        Toastify({
+            text: "Please, write some words",
+            duration: 3000,
+            destination: "https://github.com/apvarun/toastify-js",
+            newWindow: true,
+            close: true,
+            className: 'warning',
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "linear-gradient(to right, #ff0021 #e31648);",
+            },
+            onClick: function () { } // Callback after click
+        }).showToast();
+    }
+})
 
