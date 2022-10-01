@@ -1,6 +1,7 @@
 let search_inp = document.getElementById('search')
 let search_menu = document.querySelector('.search-block')
 let search_history = document.querySelector('.search-history')
+let search_icon = document.querySelector('.search-icon')
 search_inp.addEventListener('focus', (e) => {
     search_menu.classList.add('focus')
 })
@@ -48,16 +49,5 @@ document.addEventListener('keypress', (e) => {
         }
     }
 })
+search_icon.addEventListener('click', create)
 
-
-// let remove = document.querySelectorAll('.delete')
-// let history_item = document.querySelectorAll('.history-item')
-// remove.forEach((item, index)=>{
-//     item.addEventListener('click', ()=>{
-//         history_item[index].parentElement.removeChild(history_item[index])
-//         console.log(history_item[index]);
-//     })
-// })
-function da() {
-    console.log(remove.length);
-}
